@@ -30,7 +30,7 @@ public class ExcelSheetCode {
 	
 	public static Object[][] readexcelsheetTN(String sheetName) throws Exception{
 	  
-		ip = new FileInputStream(System.getProperty("user.dir")+ "\\src\\test\\java\\com\\tutorialsninja_testdata\\ExcelData.xlsx");
+		ip = new FileInputStream(System.getProperty("user.dir")+ "\\src\\test\\java\\com\\tutorialsninja_Testdata\\ExcelDataCode.xlsx");
 		
 		workbook = new XSSFWorkbook(ip);
 		

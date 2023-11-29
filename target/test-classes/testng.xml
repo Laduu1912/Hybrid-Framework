@@ -3,17 +3,22 @@
 <suite name="Suite">
 
 <listeners>
-<listener class-name= "com.tutorialsninja_Listeners.MyListeners"/>
+
+<listener class-name="com.tutorialsninja_Listeners.MyListeners"/>
 
 </listeners>
 
- <test  name="Test">
+
+
+
+
+  <test name="Test">
     <classes>
-     
-      <class name="com.tutorialsninja_testcases.LoginTest"/>
-      <class name="com.tutorialsninja_testcases.RegisterTest"/>
-       <class name="com.tutorialsninja_testcases.SearchProductTest"/>
-       
+    <class name="com.tutorialsninja_testcases.LoginTest"/>
+    <class name="com.tutorialsninja_testcases.RegisterTest"/>
+     <class name="com.tutorialsninja_testcases.SearchProductTest"/>
+      
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

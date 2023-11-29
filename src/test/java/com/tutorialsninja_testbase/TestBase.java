@@ -1,6 +1,9 @@
+
 package com.tutorialsninja_testbase;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
@@ -24,16 +27,36 @@ public class TestBase {
 	
 	
 	
-	public TestBase() throws Exception {
+	public TestBase()  {
 		 prop= new Properties();
-		 ip = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\com\\tutorialsninja_config\\config.properties");
-		 prop.load(ip);
+		 try {
+			ip = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\com\\tutorialsninja_config\\config.properties");
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+		 try {
+			prop.load(ip);
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
 		 
 		 
 		 
 		 dataprop= new Properties();
-		 ip = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\java\\com\\tutorialsninja_testdata\\systemData.properties");
-		 dataprop.load(ip);
+		 try {
+			ip = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\java\\com\\tutorialsninja_Testdata\\systemData.properties");
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+		 try {
+			dataprop.load(ip);
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
 	}
 	
 	
